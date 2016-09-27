@@ -1,0 +1,1 @@
+cat text.txt | perl -naF';' -e 'if($F[4]>1048576){print $F[8],"\n"; $i++;}}{ print "Общее количество строк:",$.,"\n";if($i){print "Больше 1Mb:",$i,"\n"}else{print "файлов не найдено\n"}'
